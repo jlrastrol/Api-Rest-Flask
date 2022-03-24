@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: library-operations
+Version: 0.0.1
+Summary: Package with mathematical operations on lists: addition, subtraction, multiplication and division.
+Home-page: UNKNOWN
+Author: Juan Luis Rastrollo
+Author-email: email@gmail.com
+License: GNU-3
+Platform: UNKNOWN
+Requires-Python: >=3.7
+
+UNKNOWN
+
