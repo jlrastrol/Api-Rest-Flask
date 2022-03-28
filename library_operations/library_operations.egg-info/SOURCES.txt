@@ -1,9 +1,0 @@
-setup.py
-library_operations.egg-info/PKG-INFO
-library_operations.egg-info/SOURCES.txt
-library_operations.egg-info/dependency_links.txt
-library_operations.egg-info/top_level.txt
-module_operations/__init__.py
-module_operations/operations.py
-module_operations/tests/__init__.py
-module_operations/tests/test_operations.py
