@@ -7,6 +7,9 @@ app = flask.Flask(__name__)
 
 @app.route('/suma', methods=['POST'])
 def suma():
+    """
+    Prueba comentarios
+    """
     data = flask.request.json
     if("v1" not in data or "v2" not in data):
         response = flask.Response("The parameters are not valid.",status=500)
