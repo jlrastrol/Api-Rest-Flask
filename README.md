@@ -1,5 +1,5 @@
 # Api-Rest-Flask
-API REST con 4 endpoints con operaciones matemáticas sobre listas.
+REST API with 4 endpoints with mathematical operations on lists.
 ## Installation
 You can install the dependencies using the following command:
 

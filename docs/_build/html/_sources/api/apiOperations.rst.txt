@@ -39,7 +39,7 @@ API Operations
 
 .. sourcecode:: bash
 
-   [3, 5, 7]
+   [-1, -1, -1]
 
 :statuscode 200: no error
 :statuscode 500: The parameters are not valid.
@@ -89,7 +89,7 @@ API Operations
 
 .. sourcecode:: bash
 
-   [0.5, 0.6666, 0.75]
+   [0.5, 0.6666666666666666, 0.75]
 
 :statuscode 200: no error
 :statuscode 500: The parameters are not valid.
