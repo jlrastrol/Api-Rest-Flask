@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>API Operations &#8212; API Rest Flask 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Library Operations" href="../library/libraryOperations.html" />
+    <link rel="prev" title="Welcome to API Rest Flask’s documentation!" href="../index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../library/libraryOperations.html" title="Library Operations"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Welcome to API Rest Flask’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">API Rest Flask 0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">API Operations</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="api-operations">
+<h1>API Operations<a class="headerlink" href="#api-operations" title="Permalink to this headline">¶</a></h1>
+<dl class="http post">
+<dt class="sig sig-object http">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/suma</span></span></dt>
+<dd><p>Sum of two lists of numbers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Form Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>list(number)</strong> – v1 (<em>required</em>) – The name the of the author of the book</p></li>
+<li><p><strong>list(number)</strong> – v2 (<em>required</em>) – The name the of the author of the book</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p><strong>Example Request</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X GET http://127.0.0.1:5000/suma -d <span class="s1">&#39;{&quot;v1&quot;: [1,2,3],&quot;v2&quot;: [2,3,4]}&#39;</span>
+</pre></div>
+</div>
+<p><strong>Example Response</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="m">3</span>, <span class="m">5</span>, <span class="m">7</span><span class="o">]</span>
+</pre></div>
+</div>
+<dl class="http post">
+<dt class="sig sig-object http">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/resta</span></span></dt>
+<dd><p>Subtraction of two lists of numbers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Form Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>list(number)</strong> – v1 (<em>required</em>) – The name the of the author of the book</p></li>
+<li><p><strong>list(number)</strong> – v2 (<em>required</em>) – The name the of the author of the book</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p><strong>Example Request</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X GET http://127.0.0.1:5000/resta -d <span class="s1">&#39;{&quot;v1&quot;: [1,2,3],&quot;v2&quot;: [2,3,4]}&#39;</span>
+</pre></div>
+</div>
+<p><strong>Example Response</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="m">3</span>, <span class="m">5</span>, <span class="m">7</span><span class="o">]</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">statuscode 200</dt>
+<dd class="field-odd"><p>no error</p>
+</dd>
+<dt class="field-even">statuscode 500</dt>
+<dd class="field-even"><p>The parameters are not valid.</p>
+</dd>
+<dt class="field-odd">statuscode 500</dt>
+<dd class="field-odd"><p>Variables should be of type list of numbers.</p>
+</dd>
+<dt class="field-even">statuscode 500</dt>
+<dd class="field-even"><p>The lists should have the same size.</p>
+</dd>
+</dl>
+<dl class="http post">
+<dt class="sig sig-object http">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/mult</span></span></dt>
+<dd><p>Multiplication of two lists of numbers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Form Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>list(number)</strong> – v1 (<em>required</em>) – The name the of the author of the book</p></li>
+<li><p><strong>list(number)</strong> – v2 (<em>required</em>) – The name the of the author of the book</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p><strong>Example Request</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X GET http://127.0.0.1:5000/mult -d <span class="s1">&#39;{&quot;v1&quot;: [1,2,3],&quot;v2&quot;: [2,3,4]}&#39;</span>
+</pre></div>
+</div>
+<p><strong>Example Response</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="m">2</span>, <span class="m">6</span>, <span class="m">12</span><span class="o">]</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">statuscode 200</dt>
+<dd class="field-odd"><p>no error</p>
+</dd>
+<dt class="field-even">statuscode 500</dt>
+<dd class="field-even"><p>The parameters are not valid.</p>
+</dd>
+<dt class="field-odd">statuscode 500</dt>
+<dd class="field-odd"><p>Variables should be of type list of numbers.</p>
+</dd>
+<dt class="field-even">statuscode 500</dt>
+<dd class="field-even"><p>The lists should have the same size.</p>
+</dd>
+</dl>
+<dl class="http post">
+<dt class="sig sig-object http">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/divis</span></span></dt>
+<dd><p>Division of two lists of numbers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Form Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>list(number)</strong> – v1 (<em>required</em>) – The name the of the author of the book</p></li>
+<li><p><strong>list(number)</strong> – v2 (<em>required</em>) – The name the of the author of the book</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p><strong>Example Request</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X GET http://127.0.0.1:5000/divis -d <span class="s1">&#39;{&quot;v1&quot;: [1,2,3],&quot;v2&quot;: [2,3,4]}&#39;</span>
+</pre></div>
+</div>
+<p><strong>Example Response</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="m">0</span>.5, <span class="m">0</span>.6666, <span class="m">0</span>.75<span class="o">]</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">statuscode 200</dt>
+<dd class="field-odd"><p>no error</p>
+</dd>
+<dt class="field-even">statuscode 500</dt>
+<dd class="field-even"><p>The parameters are not valid.</p>
+</dd>
+<dt class="field-odd">statuscode 500</dt>
+<dd class="field-odd"><p>Variables should be of type list of numbers.</p>
+</dd>
+<dt class="field-even">statuscode 500</dt>
+<dd class="field-even"><p>The lists should have the same size.</p>
+</dd>
+<dt class="field-odd">statuscode 500</dt>
+<dd class="field-odd"><p>Division by 0 is not possible.</p>
+</dd>
+</dl>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../index.html"
+                          title="previous chapter">Welcome to API Rest Flask’s documentation!</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../library/libraryOperations.html"
+                          title="next chapter">Library Operations</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/apiOperations.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../library/libraryOperations.html" title="Library Operations"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Welcome to API Rest Flask’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">API Rest Flask 0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">API Operations</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Juan Luis Rastrollo.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>
